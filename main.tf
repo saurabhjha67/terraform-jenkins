@@ -1,6 +1,6 @@
 resource "google_compute_instance" "vm_instance" {
   project      = "precise-valor-313312"
-  name         = "testvm"
+  name         = var.name
   machine_type = "f1-micro"
   zone         = "us-central1-a"
 
