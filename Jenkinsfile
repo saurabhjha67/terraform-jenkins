@@ -15,7 +15,7 @@ pipeline {
   stage ('Provisioning') {
     steps {  
     sh 'terraform init'
-     sh 'terraform plan -var 'name=${name}''
+     sh 'terraform plan -var "name=$(name)"'
  
    }
   } 
