@@ -14,9 +14,10 @@ pipeline {
     }
   stage ('Provisioning') {
     steps {  
+    echo '${name}'
     sh 'terraform init'
-    sh 'terraform plan -var "name=$(name)"'
-    sh 'terraform apply -var "name=$(name)" -auto-approve'
+    sh 'terraform plan -var name=${name}'
+    sh 'terraform apply -var name=${name} -auto-approve'
    }
   } 
  }
