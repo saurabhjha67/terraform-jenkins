@@ -17,8 +17,8 @@ pipeline {
     steps {  
     echo '${name}'
     sh 'terraform init'
-    sh 'terraform plan -var name=${name}'
-    sh 'terraform apply -var name=${name} -auto-approve'
+     sh 'terraform plan -state=${name}.tfstate -var name=${name}'
+    sh 'terraform apply -state=${name}.tfstate -var name=${name} -auto-approve'
    }
   } 
  }
