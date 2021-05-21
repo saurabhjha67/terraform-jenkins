@@ -2,7 +2,7 @@ resource "google_compute_instance" "vm_instance" {
   project      = "precise-valor-313312"
   name         = var.name
   machine_type = "f1-micro"
-  zone         = "us-east1-a"
+  zone         = "us-east1-b"
 
   boot_disk {
     initialize_params {
